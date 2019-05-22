@@ -1,0 +1,62 @@
+:global {
+  .emoji {
+    isolation: isolate;
+    display: inline-block;
+  }
+  img, iframe {
+    isolation: isolate;
+  }
+}
+:local {
+  .blender {
+    background-color: white;
+    position: fixed;
+    right: calc(50% - 40rem / 2 - 4rem);
+    bottom: 1rem;
+    mix-blend-mode: exclusion;
+    pointer-events: none;
+    transition: all ease .5s;
+    @media screen and (max-width: 768px) {
+      right: 1rem;
+    }
+  }
+  .expansion {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    &.moon {
+      transform: scale(90);
+    }
+  }
+  .opacity {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    &.moon {
+      opacity: 1;
+    }
+  }
+  .toggle {
+    background: #100f2c;
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    border-radius: 50%;
+    right: calc(50% - 40rem / 2 - 4rem);
+    bottom: 1rem;
+    cursor: pointer;
+    transition: all ease .5s;
+    @media screen and (max-width: 768px) {
+      right: 1rem;
+      opacity: .8;
+    }
+  }
+  .hasZIndex {
+    z-index: 1;
+    @media screen and (max-width: 768px) {
+      opacity: .2;
+    }
+  }
+}
