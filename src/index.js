@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
+import { useTheme } from './useTheme'
 import cx from 'classnames'
 import s from './s.module.scss'
 
@@ -14,28 +15,23 @@ const TYPE = {
 }
 
 const SunMoonToggle = ({ backgroundColor, type = TYPE.DEFAULT }) => {
-  const [theme, setTheme] = useState(
-    typeof window !== 'undefined'
-      ? window.localStorage.getItem('theme')
-      : THEMES[0]
+  const { theme, toggleTheme } = useTheme(
+    typeof window !== 'undefined' ? window.localStorage.getItem('theme') : null
   )
-  const toggleTheme = currentTheme => {
-    const newTheme = getNewTheme(currentTheme)
-    typeof window !== 'undefined' &&
-      window.localStorage.setItem('theme', newTheme)
-    setTheme(newTheme)
-  }
+  useEffect(() => {
+    typeof window !== 'undefined' && window.localStorage.setItem('theme', theme)
+  }, [theme])
   return (
     <React.Fragment>
       <div
-        className={cx(s.toggle, theme === THEMES[1] ? null : s.hasZIndex)}
+        className={cx(s.toggle, s[theme])}
         onClick={toggleTheme.bind(null, theme)}
       />
       <div
         className={cx(
           s.blender,
           type === TYPE.DEFAULT ? s.opacity : s.expansion,
-          theme === THEMES[1] ? s.moon : null
+          s[theme]
         )}
         style={{ backgroundColor }}
       />

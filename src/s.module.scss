@@ -24,20 +24,20 @@
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    &.moon {
+  }
+  .expansion.moon {
       transform: scale(90);
     }
-  }
   .opacity {
     width: 100vw;
     height: 100vh;
     opacity: 0;
     top: 0;
     left: 0;
-    &.moon {
+  }
+  .opacity.moon {
       opacity: 1;
     }
-  }
   .toggle {
     background: #100f2c;
     width: 3rem;
@@ -53,10 +53,11 @@
       opacity: .8;
     }
   }
-  .hasZIndex {
-    z-index: 1;
-    @media screen and (max-width: 768px) {
-      opacity: .2;
+  .toggle.sun {
+    transition: all ease .5s;
+      z-index: 1;
+      @media screen and (max-width: 768px) {
+        opacity: .2;
+      }
     }
-  }
 }
