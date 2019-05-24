@@ -8,6 +8,10 @@ The CSS property `mix-blend-mode` ([browser support](https://caniuse.com/#feat=c
 
 We're using `mix-blend-mode: exclusion` which is a lower contrast version of `mix-blend-mode: difference`.
 
+Site that uses this:
+
+- [A Work in Progress](https://dev.wgao19.cc)
+
 You may read more about it in the following articles:
 
 - [Sun Moon Blending Mode](https://dev.wgao19.cc/2019-05-04__sun-moon-blending-mode/)
