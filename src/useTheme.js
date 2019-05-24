@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const THEMES = ["sun", "moon"];
 const getNewTheme = currentTheme =>
