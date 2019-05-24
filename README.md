@@ -37,9 +37,7 @@ const Layout = () => (
 
 ## 🍱 Props
 
-| Props             | Type                    | Optional | Default   | What it does                                                                                                   |
-| :---------------- | ----------------------- | -------- | --------- | -------------------------------------------------------------------------------------------------------------- |
-| `backgroundColor` | `string`                | Yes      | `white`   | Background color of your site, used to compute the dark color while preserving the contrast to your foreground |
-| `type`            | `'default' \| 'hipster'` | Yes      | `'default'` | `'default'` uses opacity (see gif below), `'hipster'` uses the expansion effect (gif above)                        |
-
-![](https://i.imgur.com/CsEehnx.gif)
+| Props             | Type                     | Optional | Default     | What it does                                                                                                                  |
+| :---------------- | ------------------------ | -------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `backgroundColor` | `string`                 | Yes      | `'white'`   | Background color of your site, used to compute the dark color while preserving the contrast to your foreground                |
+| `type`            | `'default'`, `'hipster'` | Yes      | `'default'` | `'default'` uses opacity (see gif [here](https://i.imgur.com/CsEehnx.gif)), `'hipster'` uses the expansion effect (gif above) |
