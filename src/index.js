@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useTheme } from "./useTheme";
-import cx from "classnames";
 import s from "./s.module.scss";
 
 const THEMES = ["sun", "moon"];
@@ -20,15 +19,13 @@ const SunMoonToggle = ({ backgroundColor, type = TYPE.DEFAULT }) => {
   return (
     <React.Fragment>
       <div
-        className={cx(s.toggle, s[theme])}
+        className={`${s.toggle} ${s[theme]}`}
         onClick={toggleTheme.bind(null, theme)}
       />
       <div
-        className={cx(
-          s.blender,
-          type === TYPE.DEFAULT ? s.opacity : s.expansion,
-          s[theme]
-        )}
+        className={`${s.blender} ${
+          type === TYPE.DEFAULT ? s.opacity : s.expansion
+        } ${s[theme]}`}
         style={{ backgroundColor }}
       />
     </React.Fragment>
