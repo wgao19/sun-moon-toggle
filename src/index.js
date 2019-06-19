@@ -13,7 +13,7 @@ const TYPE = {
   HIPSTER: "hipster"
 };
 
-const SunMoonToggle = ({ backgroundColor, type = TYPE.DEFAULT, toggleClassName, blenderClassName }) => {
+const SunMoonToggle = ({ backgroundColor, type = TYPE.DEFAULT, toggleClassName, blenderClassName, ...props }) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -21,6 +21,7 @@ const SunMoonToggle = ({ backgroundColor, type = TYPE.DEFAULT, toggleClassName, 
       <div
         className={`${s.toggle} ${s[theme]} ${toggleClassName}`}
         onClick={toggleTheme.bind(null, theme)}
+        {...props}
       />
       <div
         className={`${s.blender} ${
