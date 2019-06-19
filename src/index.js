@@ -13,21 +13,21 @@ const TYPE = {
   HIPSTER: "hipster"
 };
 
-const SunMoonToggle = ({ backgroundColor, type = TYPE.DEFAULT, toggleClassName, blenderClassName, ...props }) => {
+const SunMoonToggle = ({ backgroundColor, type = TYPE.DEFAULT, style }) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <React.Fragment>
       <div
-        className={`${s.toggle} ${s[theme]} ${toggleClassName}`}
+        className={`${s.toggle} ${s[theme]}`}
         onClick={toggleTheme.bind(null, theme)}
-        {...props}
+        style={style}
       />
       <div
         className={`${s.blender} ${
           type === TYPE.DEFAULT ? s.opacity : s.expansion
-        } ${s[theme]} ${blenderClassName}`}
-        style={{ backgroundColor }}
+        } ${s[theme]}`}
+        style={{ backgroundColor, ...style }}
       />
     </React.Fragment>
   );
