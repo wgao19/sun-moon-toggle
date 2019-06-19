@@ -26,7 +26,7 @@ const SunMoonToggle = ({ backgroundColor, type = TYPE.DEFAULT, toggleClassName, 
       <div
         className={`${s.blender} ${
           type === TYPE.DEFAULT ? s.opacity : s.expansion
-        } ${s[theme]}` ${blenderClassName}}
+        } ${s[theme]} ${blenderClassName}`}
         style={{ backgroundColor }}
       />
     </React.Fragment>
