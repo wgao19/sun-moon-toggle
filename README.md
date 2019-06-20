@@ -32,7 +32,7 @@ import SunMoonToggle from 'sun-moon-toggle'
 const Layout = () => (
   <div>
     {/* put it before other content */}
-    <SunMoonToggle background="#efefef" />
+    <SunMoonToggle background="#efefef" style={{ right: '1rem' }} />
     <main>
       <h1>Hello, it's me</h1>
       <img {/** img is by default escaped */} />
@@ -52,3 +52,4 @@ const Layout = () => (
 | :-- | --- | --- | --- | --- |
 | `backgroundColor` | `string` | Yes | `'white'` | Background color of your site, used to compute the dark color while preserving the contrast to your foreground |
 | `type` | `'default'`, `'hipster'` | Yes | `'default'` | `'default'` uses opacity (see gif [here](https://i.imgur.com/CsEehnx.gif)), `'hipster'` uses the expansion effect (gif above) |
+| `style` | `object` | Yes | `undefined` | In case you need to move the toggle, use this prop to set position on the screen |
