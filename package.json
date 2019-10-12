@@ -1,12 +1,12 @@
 {
   "name": "sun-moon-toggle",
-  "version": "1.0.3",
-  "main": "src/index.js",
+  "version": "1.0.11",
+  "main": "dist/bundle.js",
   "license": "MIT",
   "scripts": {
     "clean": "rm dist/bundle.js",
     "start": "parcel src/index.html",
-    "build-prod": "parcel build src/index.html"
+    "build": "rollup -c rollup.config.js"
   },
   "peerDependencies": {
     "react": "^16.8.6",
@@ -16,13 +16,14 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
-    "parcel-bundler": "^1.12.3",
-    "sass": "^1.20.1"
-  },
-  "dependencies": {
     "autoprefixer": "^9.5.1",
-    "classnames": "^2.2.6",
+    "node-sass": "^4.12.0",
+    "parcel-bundler": "^1.12.3",
     "postcss-modules": "^1.4.1",
-    "react": "^16.8.6"
+    "rollup": "^1.12.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-node-resolve": "^5.0.3",
+    "rollup-plugin-postcss": "^2.0.3",
+    "sass": "^1.20.1"
   }
 }
