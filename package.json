@@ -1,6 +1,6 @@
 {
   "name": "sun-moon-toggle",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "dist/bundle.js",
   "license": "MIT",
   "scripts": {
