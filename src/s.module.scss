@@ -4,7 +4,8 @@
     display: inline-block;
   }
   img,
-  iframe {
+  iframe,
+  video {
     isolation: isolate;
   }
 }
